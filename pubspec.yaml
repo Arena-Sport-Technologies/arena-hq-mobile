@@ -45,6 +45,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_flavorizr: ^2.4.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -87,3 +88,26 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flavorizr:
+  flavors:
+    dev:
+      app:
+        name: "Arena HQ Development"
+      android:
+        applicationId: "com.arenasporttechnologies.arenahq.dev"
+      ios:
+        bundleId: "com.arenasporttechnologies.arenahq.dev"
+    stg:
+      app:
+        name: "Arena HQ Staging"
+      android:
+        applicationId: "com.arenasporttechnologies.arenahq.stg"
+      ios:
+        bundleId: "com.arenasporttechnologies.arenahq.stg"
+    prod:
+      app:
+        name: "Arena HQ Production"
+      android:
+        applicationId: "com.arenasporttechnologies.arenahq"
+      ios:
+        bundleId: "com.arenasporttechnologies.arenahq"
