@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'arena-hq-dev.firebasestorage.app',
     iosBundleId: 'com.arenasporttechnologies.arenahq.dev',
   );
+
 }
