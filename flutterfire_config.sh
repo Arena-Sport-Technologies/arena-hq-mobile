@@ -28,7 +28,7 @@ case $1 in
     ;;
   prod)
     flutterfire config \
-      --project=arena-hq-prod \
+      --project=arena-hq-prd \
       --out=lib/firebase_options_prod.dart \
       --ios-bundle-id=com.arenasporttechnologies.arenahq \
       --ios-out=ios/flavors/prod/GoogleService-Info.plist \
