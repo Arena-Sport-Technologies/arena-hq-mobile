@@ -8,7 +8,11 @@
         {
             "name": "arenahq_mobile",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ]
         },
         {
             "name": "arenahq_mobile (profile mode)",

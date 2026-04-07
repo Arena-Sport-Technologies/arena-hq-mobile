@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "958988771919",
+    "project_id": "arena-hq-dev",
+    "storage_bucket": "arena-hq-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958988771919:android:bbaafdf07340747428403a",
+        "android_client_info": {
+          "package_name": "com.arenasporttechnologies.arenahq.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQdPBL_vzxEaSH1fX0jz04KClIhqKt2uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
