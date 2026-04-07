@@ -3,8 +3,13 @@ set -euo pipefail
 
 echo "Running quality checks"
 
-fvm dart format --output=none --set-exit-if-changed .
-fvm flutter analyze
-fvm flutter test --no-pub --coverage 
+echo "Running dart format"
+dart format --output=none --set-exit-if-changed .
+
+echo "Running flutter analyze"
+flutter analyze
+
+echo "Running flutter test"
+flutter test --no-pub --coverage 
 
 echo "Quality checks passed"

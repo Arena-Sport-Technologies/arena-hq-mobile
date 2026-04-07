@@ -1,9 +1,8 @@
-import 'dart:async';
 import 'dart:developer';
-import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,14 +10,12 @@ import 'app.dart';
 import 'flavors.dart';
 
 void main() async {
-
   log('Flavor $appFlavor');
 
   F.appFlavor = Flavor.values.firstWhere(
     (element) => element.name == appFlavor,
   );
 
-  
   log("Initialising Firebase");
   FirebaseOptions fbOpt = F.firebaseOptions;
 
@@ -26,6 +23,14 @@ void main() async {
 
   log('Got Firebase Options for ${fbOpt.appId}');
   await Firebase.initializeApp(options: F.firebaseOptions);
+
+  // Force disable Crashlytics collection while in debug mode
+  if (kDebugMode) {
+    await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
+  } else {
+    // Handle Crashlytics enabled status for release builds
+    await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+  }
 
   FlutterError.onError = (errorDetails) {
     FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);

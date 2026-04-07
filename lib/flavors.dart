@@ -5,12 +5,7 @@ import 'package:arenahq_mobile/firebase_options_dev.dart' as dev;
 import 'package:arenahq_mobile/firebase_options_stg.dart' as stg;
 import 'package:arenahq_mobile/firebase_options_prod.dart' as prd;
 
-
-enum Flavor {
-  dev,
-  stg,
-  prod,
-}
+enum Flavor { dev, stg, prod }
 
 class F {
   static late final Flavor appFlavor;
@@ -18,7 +13,6 @@ class F {
   static String get name => appFlavor.name;
 
   static String get title {
-
     log('Get title  for $appFlavor');
 
     switch (appFlavor) {
@@ -32,7 +26,6 @@ class F {
   }
 
   static FirebaseOptions get firebaseOptions {
-
     log('Get Firebase options for $appFlavor');
 
     switch (appFlavor) {
@@ -44,5 +37,4 @@ class F {
         return prd.DefaultFirebaseOptions.currentPlatform;
     }
   }
-
 }
