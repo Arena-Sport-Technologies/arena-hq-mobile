@@ -419,9 +419,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -538,8 +542,8 @@
 			baseConfigurationReference = 1AC001FC78FD06A8F3B03DEB /* devRelease.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -622,8 +626,8 @@
 			baseConfigurationReference = FF1AF5F254FD1C60B0F2AD40 /* devProfile.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -634,8 +638,8 @@
 			baseConfigurationReference = B87CB804A97C621E7F11C76C /* devDebug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -721,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E15ECA1904AB6803D06ABC81 /* prodDebug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-prod";
@@ -1001,6 +1006,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4269FBD2680154B3B5D7F1E /* stgRelease.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-stg";
@@ -1009,6 +1015,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90D48B819BAA881A7C7B1FC9 /* prodProfile.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-prod";
@@ -1159,6 +1166,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 352C80D50FA7FE5369647C26 /* stgProfile.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-stg";
@@ -1327,6 +1335,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3238641E4E9F32B014BDB0A6 /* prodRelease.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-prod";
@@ -1405,6 +1414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C466557C50D8CC92DBD496C1 /* stgDebug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HM7XVNW5A7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-stg";
