@@ -9,7 +9,7 @@ jobs:
   build_release:
     runs-on: macos-latest
     env:
-      FLUTTER_VERSION: '3.8.1'
+      FLUTTER_VERSION: '3.41.5'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
