@@ -7,5 +7,5 @@ if [[ $# -eq 0 ]]; then
 fi
 
 echo "Running iOS build flavour $1"
-flutter build ios --no-codesign --flavor $1 
+flutter build ios --no-codesign --release --flavor $1 
 echo "iOS $1 build complete"
