@@ -6,8 +6,9 @@ if [[ $# -eq 0 ]]; then
   exit 1
 fi
 
-./android_build.sh $1 &
-pids+=($!)
+# ./android_build.sh $1 &
+# pids+=($!)
+
 ./ios_build.sh $1 &
 pids+=($!)
 

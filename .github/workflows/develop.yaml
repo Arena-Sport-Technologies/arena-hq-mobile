@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build_release:
+  dev_build_release:
     runs-on: macos-latest
     env:
       FLUTTER_VERSION: '3.41.5'
