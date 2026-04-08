@@ -1,0 +1,41 @@
+name: Build & Release
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build_release:
+    runs-on: macos-latest
+    env:
+      FLUTTER_VERSION: '3.8.1'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+
+      - name: 🚀 Cache pub deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.pub-cache
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: ${{ runner.os }}-pub-
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: iOS & Android build in parallel
+        run: |
+          cd scripts
+          ./build.sh dev
